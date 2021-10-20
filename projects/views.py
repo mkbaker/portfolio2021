@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Project
+
 # Create your views here.
 
 
@@ -9,7 +11,8 @@ def home(request):
 
 
 def projects(request):
-    return render(request, "projects_list.html")
+    projects = Project.objects.all()
+    return render(request, "projects_list.html", {"projects": projects})
 
 
 def contact(request):

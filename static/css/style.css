@@ -53,7 +53,6 @@
 
 body {
     font-family: "Inter var", Arial;
-    font-size: var(--p-size);
     color: var(--text);
     background-color: var(--beige);
     max-width: 1120px;
@@ -61,6 +60,7 @@ body {
     margin: 0 auto 120px auto;
 }
 
+/* **********NAV STYLES***********  */
 header {
     position: -webkit-sticky;
     position: sticky;
@@ -68,20 +68,20 @@ header {
     z-index: 3;
     padding: var(--pad);
     font-variation-settings: "wght" 400;
-  
+    font-size: var(--p-size);
     display: flex;
     justify-content: space-between;
   }
 
-  header nav:before, header nav:after {
-    content: "";
-    display: inline-block;
-    width: var(--dash-size);
-    height: 10px;
-    /* margin: 0 0.5em 0 0; */
-    background-color: var(--lavender);
-    vertical-align: middle;
-  }
+header nav:before, header nav:after {
+  content: "";
+  display: inline-block;
+  width: var(--dash-size);
+  height: 10px;
+  /* margin: 0 0.5em 0 0; */
+  background-color: var(--lavender);
+  vertical-align: middle;
+}
 
 nav {
     width: 66%;
@@ -112,4 +112,26 @@ a {
 a:hover {
     color: var(--lavender);
     font-variation-settings: "wght" 900, "wdth" 200;
+}
+
+/* **************CARD STYLES************  */
+.card {
+  background-color: var(--beige);
+  border: none;
+}
+
+.card-header {
+  font-size: 2em;
+  background-color: var(--lavender);
+}
+
+.card-footer {
+  border-top: none;
+}
+
+.card-footer div a {
+  color: var(--salmon);  
+}
+.card-footer div a:hover {
+  color: var(--lavender);
 }

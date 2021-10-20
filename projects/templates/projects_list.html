@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-This is the Projects page
+
+{% for project in projects %}
+<div class="row mb-5">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                {{ project.title }}
+            </div>
+            <div class="card-body">
+                <p>{{ project.description }}</p>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex flex-row justify-content-end">
+                    <a href="{{project.url}}" class="me-3">Live site</a>
+                    <a href="{{ project.repository_url }}">Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
 {% endblock %}
