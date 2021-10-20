@@ -8,21 +8,75 @@
     --green: #9CD4AF;
     --blue: #45ADCA;
     --salmon: #F9A0A0;
-}
-body {
-    font-family: "Inter var", Arial;
-    background-color: var(--beige);
+    --text: #000000;
+
+    --h1-size: 80px;
+    --h2-size: 40px;
+    --h3-size: 18px;
+    --h4-size: 14px;
+    --p-size: 24px;
 }
 
-nav {
-    width: 100vw;
-    height: 4rem;
+@media (max-width: 960px) {
+    :root {
+      --pad: 24px 48px 24px 48px;
+  
+      --h1-size: 64px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    :root {
+      --h1-size: 40px;
+      --h2-size: 32px;
+      --h3-size: 18px;
+      --p-size: 18px;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+    }
+  }
+
+body {
+    font-family: "Inter var", Arial;
+    font-size: var(--p-size);
+    color: var(--text);
+    background-color: var(--beige);
+    max-width: 1120px;
+    /* height: 200vh; */
+    margin: 0 auto 120px auto;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: var(--pad);
+    font-variation-settings: "wght" 400;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header h1:before {
+    content: "";
+    display: inline-block;
+    width: var(--dash-size);
+    height: 10px;
+    margin: 0 0.5em 0 0;
     background-color: var(--lavender);
+    vertical-align: middle;
+  }
+
+nav {
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-right: 1rem;
 }
 
 .navbar-brand {
@@ -36,6 +90,6 @@ a {
 }
 
 a:hover {
-    color: var(--lime);
+    color: var(--lavender);
     font-variation-settings: "wght" 900, "wdth" 200;
 }

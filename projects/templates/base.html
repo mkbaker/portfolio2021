@@ -7,17 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'header.js' %}"></script>
     <title>Kellen Baker</title>
 </head>
 
 <body>
-    <nav>
-        <a class="navbar-brand" href="{% url 'home' %}">Kellen Baker</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'blog_list' %}">Blog</a>
-        <a href="{% url 'music_list' %}">Music</a>
-        <a href="{% url 'contact' %}">Contact</a>
-    </nav>
+    <header>
+        <h1><a class="navbar-brand" href="{% url 'home' %}">Kellen Baker</a></h1>
+        <nav>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'blog_list' %}">Blog</a>
+            <a href="{% url 'music_list' %}">Music</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
     {% block content %}
     {% endblock %}
 </body>
