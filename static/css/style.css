@@ -34,10 +34,10 @@
     }
   }
   
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     :root {
     }
-  }
+  } */
 
   @keyframes spin {
     0% {
@@ -58,6 +58,10 @@ body {
     max-width: 1120px;
     height: 200vh;
     margin: 0 auto 120px auto;
+}
+
+h1 {
+  font-size: var(--h1-size)
 }
 
 /* **********NAV STYLES***********  */
