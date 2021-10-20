@@ -1,0 +1,41 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url("base.css");
+
+:root {
+    --lavender: #A9A1C8;
+    --beige: #F5F1E5;
+    --lime: #72FEA0;
+    --green: #9CD4AF;
+    --blue: #45ADCA;
+    --salmon: #F9A0A0;
+}
+body {
+    font-family: "Inter var", Arial;
+    background-color: var(--beige);
+}
+
+nav {
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--lavender);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+a {
+    color: black;
+    text-decoration: none;
+    font-variation-settings: "wght" 400, "wdth" 200;
+    transition: font-variation-settings 0.2s, color 0.2s;
+}
+
+a:hover {
+    color: var(--lime);
+    font-variation-settings: "wght" 900, "wdth" 200;
+}
