@@ -11,7 +11,7 @@ def home(request):
 
 
 def projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.filter(is_visible=True).order_by("-rank", "title")
     return render(request, "projects_list.html", {"projects": projects})
 
 

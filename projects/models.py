@@ -7,3 +7,6 @@ class Project(models.Model):
     url = models.URLField()
     repository_url = models.URLField()
     description = models.TextField()
+    rank = models.IntegerField(default=0)
+    is_visible = models.BooleanField(default=True)
+    featured_image = models.ImageField(blank=True)

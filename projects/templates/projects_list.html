@@ -10,7 +10,14 @@
                 {{ project.title }}
             </div>
             <div class="card-body">
-                <p>{{ project.description }}</p>
+                <div class="row">
+                    <div class="col">
+                        <p>{{ project.description }}</p>
+                    </div>
+                    <div class="col">
+                        <img src="{{ project.featured_image.url }}" />
+                    </div>
+                </div>
             </div>
             <div class="card-footer">
                 <div class="d-flex flex-row justify-content-end">
