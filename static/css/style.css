@@ -126,9 +126,13 @@ a:hover {
   border-top: none;
 }
 
+.card-header a:hover {
+    color: var(--lime);
+}
+
 .card-footer div a {
   color: var(--salmon);  
 }
 .card-footer div a:hover {
-  color: var(--lavender);
+  color: var(--lime);
 }

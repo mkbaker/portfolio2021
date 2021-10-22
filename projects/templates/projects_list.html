@@ -7,16 +7,18 @@
     <div class="col">
         <div class="card">
             <div class="card-header">
-                {{ project.title }}
+                <a href="{% url 'project' project.slug %}">{{ project.title }}</a>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <p>{{ project.description }}</p>
+                        <p>{{ project.description|safe }}</p>
                     </div>
+                    {% if project.featured_image %}
                     <div class="col">
                         <img src="{{ project.featured_image.url }}" />
                     </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="card-footer">

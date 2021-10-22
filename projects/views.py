@@ -15,5 +15,10 @@ def projects(request):
     return render(request, "projects_list.html", {"projects": projects})
 
 
+def project(request, slug):
+    project = Project.objects.get(slug=slug)
+    return render(request, "project.html", {"project": project})
+
+
 def contact(request):
     return render(request, "contact.html")

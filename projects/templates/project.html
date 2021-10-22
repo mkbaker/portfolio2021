@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>{{ project.title }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ project.description|safe }}
+        </div>
+    </div>
+    {% if project.featured_image %}
+    <div class="row">
+        <div class="col">
+            <img src="{{ project.featured_image.url }}" />
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

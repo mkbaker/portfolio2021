@@ -8,3 +8,4 @@ class MusicPost(models.Model):
     rank = models.IntegerField(default=0)
     is_visible = models.BooleanField(default=True)
     embed = models.CharField(max_length=1000)
+    slug = models.SlugField(blank=True)

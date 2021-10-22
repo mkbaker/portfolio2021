@@ -4,6 +4,7 @@ from .models import Project
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("title", "url")
+    prepopulated_fields = {"slug": ("title",)}
 
 
 # Register your models here.
