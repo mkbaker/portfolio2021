@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-This is the music list
+
+{% for post in music_list %}
+<div class="row mb-5">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                {{ post.title }}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        {{ post.embed|safe }}
+                    </div>
+                    <div class="col">
+                        {{ post.description }}
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
